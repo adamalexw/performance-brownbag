@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "performance": "apps/performance",
+    "performance-e2e": "apps/performance-e2e"
+  }
+}
