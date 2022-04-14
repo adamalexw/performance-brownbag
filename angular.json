@@ -1,7 +1,12 @@
 {
   "version": 2,
   "projects": {
+    "data-access": "libs/data-access",
+    "on-push": "libs/on-push",
     "performance": "apps/performance",
-    "performance-e2e": "apps/performance-e2e"
+    "performance-e2e": "apps/performance-e2e",
+    "pipes": "libs/pipes",
+    "shared": "libs/shared",
+    "track-by": "libs/track-by"
   }
 }

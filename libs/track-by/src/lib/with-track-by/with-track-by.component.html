@@ -1,0 +1,19 @@
+<performance-brownbag-add-team
+  (addTeam)="onAddTeam($event)"
+></performance-brownbag-add-team>
+<div
+  *ngFor="let team of teams$ | async; trackBy: trackByFn"
+  class="flex items-center gap-4 mb-3"
+>
+  <performance-brownbag-team [team]="team"></performance-brownbag-team>
+  <button (click)="remove(team.name)">Remove</button>
+</div>
+
+<button (click)="refresh()">Refresh</button>
+
+<div class="mt-3 pt-3 border-t">
+  <p>
+    A refresh will only update the attributes for modified objects not the
+    entire DOM tree
+  </p>
+</div>

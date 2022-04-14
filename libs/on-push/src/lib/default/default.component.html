@@ -1,0 +1,19 @@
+<img src="/assets/images/default-change-detection.png" />
+
+<div class="mt-3 pt-3 border-t">
+  <p>
+    This default strategy checks every component in the component tree from top
+    to bottom every time an event triggers change detection (like user event,
+    timer, XHR and so on). This conservative way of checking without making any
+    assumption on the component's dependencies is called dirty checking
+  </p>
+  <p>
+    Angular is very fast doing change detection for every single component as it
+    can perform thousands of checks during milliseconds using inline-caching
+    which produces VM-optimized code
+  </p>
+  <p>
+    Although Angular does a lot of optimizations behind the scenes the
+    performance can still drop on larger applications
+  </p>
+</div>

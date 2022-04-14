@@ -1,1 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
+.active-link {
+  color: red;
+}
+
+input,
+button {
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: circle;
+  margin-left: 1rem;
+}

@@ -1,0 +1,33 @@
+<performance-brownbag-add-team
+  (addTeam)="onAddTeam($event)"
+></performance-brownbag-add-team>
+<div
+  *ngFor="let team of teams; trackBy: trackByFn"
+  class="flex items-center gap-4 mb-3"
+>
+  <performance-brownbag-team [team]="team"></performance-brownbag-team>
+  <button (click)="remove(team.name)">Remove</button>
+</div>
+
+<button (click)="refresh()">Refresh</button>
+
+<div class="mt-3 pt-3 border-t">
+  <p>
+    We'll notice that DOM isn't fully reloaded but rather just the attributes
+  </p>
+  <p>
+    We could choose to either track by the index or a unique identifer on the
+    object
+  </p>
+  <p>Which property to use depends on the use case.</p>
+  <p><strong>Index</strong></p>
+  <p class="pl-3">If the number of items remain the same (sorting)</p>
+  <p class="pl-3">We are adding items to the bottom</p>
+  <p><strong>Identifier</strong></p>
+  <p class="pl-3">If we have a large list (which you shouldn't do anyway)</p>
+  <p class="pl-3">
+    If we have remove functionality (could be the 1st item upsetting all the
+    indexes)
+  </p>
+  <p class="pl-3">We are adding an item to the top</p>
+</div>

@@ -1,0 +1,21 @@
+<div
+  *ngFor="let team of teams"
+  class="flex items-center gap-2 cursor-pointer"
+  (click)="selectTeam(team)"
+>
+  <img [src]="team.logo" width="50" height="50" />
+  <span>{{ team.name }}</span>
+</div>
+
+<ng-container *ngIf="selectedTeam">
+  <div class="flex items-center gap-2">
+    You think&nbsp;<img [src]="selectedTeam.logo" width="50" height="50" />
+    <span>{{ selectedTeam.name }}</span
+    >&nbsp;will win the race
+  </div>
+</ng-container>
+
+<div class="mt-3 pt-3 border-t">
+  <p>Will create a single instance of the pipe</p>
+  <p>Still doesn't cache the data :(</p>
+</div>

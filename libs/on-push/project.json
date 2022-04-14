@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/on-push",
+  "sourceRoot": "libs/on-push/src",
+  "prefix": "performance-brownbag",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/on-push"],
+      "options": {
+        "jestConfig": "libs/on-push/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/on-push/src/**/*.ts",
+          "libs/on-push/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

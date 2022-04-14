@@ -1,0 +1,19 @@
+<performance-brownbag-add-team
+  (addTeam)="onAddTeam($event)"
+></performance-brownbag-add-team>
+<div *ngFor="let team of teams$ | async" class="flex items-center gap-4 mb-3">
+  <performance-brownbag-team [team]="team"></performance-brownbag-team>
+  <button (click)="remove(team.name)">Remove</button>
+</div>
+
+<button (click)="refresh()">Refresh</button>
+
+<div class="mt-3 pt-3 border-t">
+  <p>Because we are using observables the default behaviour has improved</p>
+  <p>
+    A refresh will only rebuild the DOM for modified objects (including index)
+  </p>
+  <p>
+    When we refresh the teams are in alpha order causing the indexes to change
+  </p>
+</div>

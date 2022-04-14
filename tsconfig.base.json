@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@performance-brownbag/data-access": ["libs/data-access/src/index.ts"],
+      "@performance-brownbag/on-push": ["libs/on-push/src/index.ts"],
+      "@performance-brownbag/pipes": ["libs/pipes/src/index.ts"],
+      "@performance-brownbag/shared": ["libs/shared/src/index.ts"],
+      "@performance-brownbag/track-by": ["libs/track-by/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

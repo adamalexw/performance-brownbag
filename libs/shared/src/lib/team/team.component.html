@@ -1,0 +1,11 @@
+<ng-container *ngIf="team">
+  <ng-container *ngIf="inbuiltPipes; else lodashPipeTemplate">
+    <img [src]="team.name | logo" width="50" height="50" />
+  </ng-container>
+
+  <ng-template #lodashPipeTemplate>
+    <img [src]="team.name | logoLodash" width="50" height="50" />
+  </ng-template>
+
+  <span class="team-name">{{ team.name }}</span>
+</ng-container>

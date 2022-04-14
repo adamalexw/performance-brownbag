@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/track-by",
+  "sourceRoot": "libs/track-by/src",
+  "prefix": "performance-brownbag",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/track-by"],
+      "options": {
+        "jestConfig": "libs/track-by/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/track-by/src/**/*.ts",
+          "libs/track-by/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,35 @@
+<img src="/assets/images/on-push-change-detection.png" />
+
+<div class="mt-3 pt-3 border-t">
+  <p>
+    On push provides the possibility to skip unnecessary checks for this
+    component and all it's child components
+  </p>
+  <p>
+    Works by detecting if some new data has been explicitly pushed into the
+    component, either via a component input or an Observable subscribed to using
+    the async pipe
+  </p>
+  <p>Angular knows that the component only needs to be updated if:</p>
+
+  <ul>
+    <li>the input reference has changed</li>
+    <ul>
+      <li>Primitives are passed by value</li>
+      <li>
+        Object and arrays are also passed by value but modifying object
+        properties or array entries does not create a new reference and
+        therefore does not trigger change detection
+      </li>
+    </ul>
+    <li>the component or one of its children triggers an event handler</li>
+    <ul>
+      <li>Be aware a rxJs subscribe doesn't trigger a change</li>
+    </ul>
+    <li>change detection is triggered manually</li>
+    <li>
+      an observable linked to the template via the async pipe emits a new value
+      (internally markForCheck is called)
+    </li>
+  </ul>
+</div>

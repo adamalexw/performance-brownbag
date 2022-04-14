@@ -1,0 +1,18 @@
+<performance-brownbag-add-team
+  (addTeam)="onAddTeam($event)"
+></performance-brownbag-add-team>
+
+<div *ngFor="let team of teams" class="flex items-center gap-4 mb-3">
+  <performance-brownbag-team [team]="team"></performance-brownbag-team>
+  <button (click)="remove(team.name)">Remove</button>
+</div>
+
+<button (click)="refresh()">Refresh</button>
+
+<div class="mt-3 pt-3 border-t">
+  <p>We'll notice that the DOM is fully reloaded</p>
+  <p>
+    Angular performs an equality test === which checks the pointers in memory
+  </p>
+  <p>Refresh returns a new object creating a different pointer</p>
+</div>
