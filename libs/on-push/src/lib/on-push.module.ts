@@ -6,26 +6,29 @@ import { OnPushComponent } from './on-push/on-push.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild([
-    {
-      path: '',
-      component: OnPushHomeComponent,
-      children: [
-        {
-          path: '',
-          redirectTo: 'default',
-        },
-        {
-          path: 'default',
-          component: DefaultComponent,
-        },
-        {
-          path: 'on-push',
-          component: OnPushComponent,
-        },
-      ],
-    },
-  ]),],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: OnPushHomeComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'default',
+          },
+          {
+            path: 'default',
+            component: DefaultComponent,
+          },
+          {
+            path: 'on-push',
+            component: OnPushComponent,
+          },
+        ],
+      },
+    ]),
+  ],
   declarations: [DefaultComponent, OnPushHomeComponent, OnPushComponent],
 })
 export class OnPushModule {}

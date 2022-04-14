@@ -1,0 +1,21 @@
+<ul>
+  <li>Using the angular router</li>
+  <ul>
+    <li>Code splitting domain modules which may contain child routes</li>
+  </ul>
+  <li>Manually on demand</li>
+  <ul>
+    <li>Dynamically load component and it's dependencies using it's module</li>
+  </ul>
+  <div class="pt-3">
+    <button type="button" (click)="loadModule()">Load</button>
+  </div>
+</ul>
+
+<div class="pt-3">
+  <ng-template #onDemandTemplate></ng-template>
+</div>
+
+<div class="pt-3 mt-3 border-t">
+  <p>If we check the network tab we can see the module / component being loaded</p>
+</div>

@@ -1,0 +1,8 @@
+<p>lazy-complex-component works!</p>
+
+<div
+  *ngFor="let team of dataService.getTeams() | async"
+  class="flex items-center gap-4 mb-3"
+>
+  <performance-brownbag-team [team]="team"></performance-brownbag-team>
+</div>

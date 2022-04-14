@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/lazy-load",
+  "sourceRoot": "libs/lazy-load/src",
+  "prefix": "performance-brownbag",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lazy-load"],
+      "options": {
+        "jestConfig": "libs/lazy-load/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/lazy-load/src/**/*.ts",
+          "libs/lazy-load/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

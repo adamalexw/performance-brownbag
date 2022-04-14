@@ -19,6 +19,10 @@ import { NxWelcomeComponent } from './nx-welcome.component';
     {
       path: 'on-push',
       loadChildren: () => import('@performance-brownbag/on-push').then((m) => m.OnPushModule),
+    },
+    {
+      path: 'lazy-load',
+      loadChildren: () => import('@performance-brownbag/lazy-load').then((m) => m.LazyLoadModule),
     }]
   )],
   providers: [],

@@ -1,0 +1,13 @@
+<div class="pt-3 flex gap-2">
+  <input type="text" [(ngModel)]="data" />
+  <button type="button" (click)="loadComponent()">Load</button>
+</div>
+
+<div class="pt-3">
+  <ng-template #onDemandTemplate></ng-template>
+</div>
+
+<div class="pt-3 mt-3 border-t">
+  <p>Loading a single component on demand</p>
+  <p>Works fine when there are no dependencies</p>
+</div>

@@ -1,41 +1,25 @@
 <h2>Who do you think we win the race?</h2>
-<div
-  *ngFor="let team of teams"
-  class="cursor-pointer"
-  (click)="selectTeam(team)"
->
+<div *ngFor="let team of teams" class="cursor-pointer" (click)="selectTeam(team)">
   <performance-brownbag-team [team]="team"></performance-brownbag-team>
 </div>
 
 <ng-container *ngIf="selectedTeam">
   <div class="flex items-center">
     You think the race winner will be&nbsp;
-    <performance-brownbag-team
-      [team]="selectedTeam"
-    ></performance-brownbag-team>
+    <performance-brownbag-team [team]="selectedTeam"></performance-brownbag-team>
   </div>
 </ng-container>
 
 <div class="mt-3 pt-3 border-t">
   <p>
-    An instance of the logo pipe is created per image (this didn't used to be
-    case in view engine) for this
-    <a
-      href="https://stackoverflow.com/questions/66365244/in-angular-ivy-why-pure-pipe-instance-is-not-cached-between-usages-like-in-view"
-      >reason</a
-    >
+    An instance of the logo pipe is created per image (this didn't used to be case in view engine) for this
+    <a href="https://stackoverflow.com/questions/66365244/in-angular-ivy-why-pure-pipe-instance-is-not-cached-between-usages-like-in-view">reason</a>
   </p>
-  <p>
-    If the input to the pipe hasn't changed it will return the cached / memoized
-    value unlike function templates or impure pipes
-  </p>
+  <p>If the input to the pipe hasn't changed it will return the cached / memoized value unlike function templates or impure pipes</p>
 </div>
 
 <div class="mt-3">
-  <p>
-    I am suprised that when we select a team the pipe is not cached???? I assume
-    this has to do with selectedItem memory reference changing
-  </p>
+  <p>I am suprised that when we select a team the pipe is not cached???? I assume this has to do with selectedItem memory reference changing</p>
   <ul class="pt-3">
     <li>I did try removing the ng-container</li>
     <li>I tried inline html</li>
@@ -44,6 +28,6 @@
     <li>I tried setting the selected index rather than object</li>
   </ul>
   <div class="pt-3">
-    <a [routerLink]="['../lodash-pipe']"><strong>THE SOLUTION</strong></a>
+    <a [routerLink]="['../lodash-pipe']">THE SOLUTION</a>
   </div>
 </div>
